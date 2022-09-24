@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>LOTR Ipsum</title>
+		<meta name="author" content="Maximilian Michel" />
+		<meta
+			name="description"
+			content="Lorem ipsum generator with text from Hobbit, Lord of the Rings and Silmarillion"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- TODO: Find image -->
+		<meta property="og:image" content="img/title_image.jpg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:heigth" content="630" />
+		<meta property="og:title" content="LOTR Ipsum" />
+		<meta property="og:description" content="Create Lorem Ipsum text with Lord of the Rings" />
+		<!-- TODO: url to website -->
+		<meta property="og:url" content="https://github.com/mmiche01/lotr-ipsum" />
+		<meta property="og:type" content="website" />
+		<link rel="stylesheet" href="styles.css" />
+		<!-- TODO: Find favicon -->
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	</head>
+	<body>
+		<div class="page-content">
+			<header>
+				<div class="title-image"></div>
+			</header>
+			<main class="main">
+				<div class="input-container">
+					<form action="index.html" method="GET">
+						<div class="input-paragraphs">
+							<label for="paragraphs">Paragraphs</label>
+							<input type="number" name="paragraphs" id="paragraphs" required />
+						</div>
+						<div class="input-book">
+							<div class="book-radio book-lotr">
+								<label for="lotr">Lord of the Rings</label>
+								<input type="radio" name="book" id="lotr" value="lotr" required />
+							</div>
+							<div class="book-radio book-hobbit">
+								<label for="hobbit">Hobbit</label>
+								<input type="radio" name="book" id="hobbit" value="hobbit" required />
+							</div>
+							<div class="book-radio book-silmarillion">
+								<label for="silmarillion">Silmarillion</label>
+								<input type="radio" name="book" id="silmarillion" value="silmarillion" required />
+							</div>
+						</div>
+						<button type="submit"></button>
+					</form>
+				</div>
+				<div class="text-container">
+					<div class="lorem-ipsum-text"></div>
+				</div>
+			</main>
+			<footer>
+				<div class="github-icon"></div>
+				<div class="name"></div>
+			</footer>
+		</div>
+	</body>
+</html>
