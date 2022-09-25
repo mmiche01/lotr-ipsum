@@ -1,0 +1,19 @@
+{
+	"name": "lotr-ipsum",
+	"version": "1.0.0",
+	"description": "Lorem ipsum generator with text from Hobbit, Lord of the Rings and Silmarillion",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mmiche01/lotr-ipsum.git"
+	},
+	"author": "Maximilian Michel",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/mmiche01/lotr-ipsum/issues"
+	},
+	"homepage": "https://github.com/mmiche01/lotr-ipsum#readme"
+}
