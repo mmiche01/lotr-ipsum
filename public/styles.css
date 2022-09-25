@@ -1,0 +1,150 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	/* outline: 1px solid red; */
+	/* font-family: 'PT Sans', sans-serif; */
+}
+
+:root {
+	--light-gold: hsl(47, 94%, 73%);
+	--gold: hsl(44, 96%, 62%);
+	--dark-gold: hsl(22, 67%, 59%);
+	--dark-blue: #14213d;
+
+	--grey: hsl(214, 9%, 15%);
+
+	/* CSS HSL https://coolors.co/palette/03071e-370617-6a040f-9d0208-d00000-dc2f02-e85d04-f48c06-faa307-ffba08*/
+	--xiketic: hsla(231, 82%, 6%, 1);
+	--dark-sienna: hsla(339, 80%, 12%, 1);
+	--rosewood: hsla(354, 93%, 22%, 1);
+	--dark-red: hsla(358, 97%, 31%, 1);
+	--rosso-corsa: hsla(0, 100%, 41%, 1);
+	--vermilion: hsla(12, 98%, 44%, 1);
+	--persimmon: hsla(23, 97%, 46%, 1);
+	--tangerine: hsla(34, 95%, 49%, 1);
+	--orange-web: hsla(39, 96%, 50%, 1);
+	--selective-yellow: hsla(43, 100%, 52%, 1);
+}
+
+/* 1. General layout */
+
+html {
+	height: 100%;
+}
+
+body {
+	background-image: url('/img/map.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100%;
+}
+
+.page-content {
+	width: 60%;
+	margin: 0 auto;
+	height: 100%;
+	background-color: hsla(0, 0%, 100%, 70%);
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex: 1;
+}
+
+.title-image a {
+	display: block;
+	background-image: url('/img/ring.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	aspect-ratio: 5 / 1;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.input-book {
+	display: flex;
+}
+
+.text-area {
+	margin-top: 2em;
+	position: relative;
+}
+
+.lorem-ipsum-text {
+	margin: 2em;
+	padding: 1em;
+	border: 1px solid white;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+}
+
+.footer * {
+	padding: 0 0.25em;
+}
+
+h2 {
+	margin: 1em 0 0.5em 0;
+}
+
+.btn-copy {
+	display: none;
+	position: absolute;
+	top: 1em;
+	right: 3em;
+}
+
+.text-area:hover .btn-copy {
+	display: block;
+}
+
+/* 2. Fonts and colors */
+
+.main,
+.footer {
+	background-color: var(--grey);
+}
+
+h2 {
+	color: var(--dark-gold);
+}
+
+label {
+	color: var(--gold);
+}
+
+button {
+	background-color: var(--gold);
+}
+
+.lorem-ipsum-text {
+	color: white;
+}
+
+.footer {
+	color: white;
+	font-weight: 300;
+}
+
+.github-icon {
+	color: white;
+}
+
+.github-icon:hover {
+	color: var(--dark-gold);
+	transition: color 0.25s;
+}
