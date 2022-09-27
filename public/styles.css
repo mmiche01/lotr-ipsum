@@ -73,6 +73,11 @@ body {
 
 .input-book {
 	display: flex;
+	gap: 2em;
+}
+
+.input-book input {
+	display: none;
 }
 
 .text-area {
@@ -90,7 +95,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 50px;
+	min-height: 50px;
 }
 
 .footer * {
@@ -98,21 +103,20 @@ body {
 }
 
 h2 {
-	margin: 1em 0 0.5em 0;
+	margin: 1.5em 0 0.75em 0;
 }
 
 .btn-copy {
-	display: none;
 	position: absolute;
 	top: 1em;
 	right: 3em;
+	aspect-ratio: 1 / 1;
+	width: 3.5em;
+	padding: 0;
+	transition: all 1s;
 }
 
-.text-area:hover .btn-copy {
-	display: block;
-}
-
-/* 2. Fonts and colors */
+/* 2. Fonts, colors etc. */
 
 .main,
 .footer {
@@ -123,16 +127,64 @@ h2 {
 	color: var(--dark-gold);
 }
 
-label {
+.input-book label {
+	display: block;
+	padding: 0.5em;
+	font-size: 1.25em;
 	color: var(--gold);
+	outline: 1px solid var(--gold);
+	border-radius: 5px;
+	transition: box-shadow 0.2s;
+}
+
+.input-book label:hover {
+	box-shadow: 0px 0px 20px 0px var(--gold);
+}
+
+.input-book input:checked + label {
+	font-weight: bold;
+	outline: 5px solid var(--gold);
+}
+
+.input-paragraphs input {
+	transition: box-shadow 0.2s;
+}
+
+.input-paragraphs input:hover,
+.input-paragraphs input:active {
+	box-shadow: 0px 0px 20px 0px var(--gold);
 }
 
 button {
 	background-color: var(--gold);
+	padding: 1em 1.5em 1em 1.5em;
+	border: 1px solid var(--gold);
+	border-radius: 5px;
+	transition: box-shadow 0.2s;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+button:active {
+	background-color: hsl(44, 96%, 45%);
+}
+
+.btn-generate:hover {
+	box-shadow: 0px 0px 20px 0px var(--gold);
+}
+
+.btn-copy {
+	opacity: 0;
+	transition: opacity 0.2s;
+}
+
+.text-area:hover .btn-copy {
+	opacity: 1;
 }
 
 .lorem-ipsum-text {
 	color: white;
+	border-radius: 5px;
 }
 
 .footer {
@@ -142,9 +194,9 @@ button {
 
 .github-icon {
 	color: white;
+	transition: color 0.2s;
 }
 
 .github-icon:hover {
-	color: var(--dark-gold);
-	transition: color 0.25s;
+	color: var(--gold);
 }
