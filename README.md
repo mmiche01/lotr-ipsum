@@ -2,4 +2,8 @@
 
 Currently only running on localhost
 
-### Background image: © Kevan Emmott, [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/) (available [here](https://www.flickr.com/photos/kevan/38944425))
+### Credits
+
+Books: [The Free Books Online](https://thefreebooksonline.net/series/Lord_of_the_Rings.html)
+
+Background map of Middle-Earth: © Kevan Emmott, [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/) (available [here](https://www.flickr.com/photos/kevan/38944425))
