@@ -47,9 +47,18 @@ body {
 	width: 60%;
 	margin: 0 auto;
 	height: 100%;
-	background-color: hsla(0, 0%, 100%, 70%);
 	display: flex;
 	flex-direction: column;
+	background: rgb(251, 202, 65);
+	background: radial-gradient(
+		circle,
+		rgba(251, 202, 65, 1) 0%,
+		rgba(115, 99, 51, 1) 75%,
+		rgba(35, 38, 42, 1) 100%
+	);
+}
+
+.header {
 }
 
 .main {
@@ -58,11 +67,11 @@ body {
 
 .title-image a {
 	display: block;
-	background-image: url('/img/ring.svg');
+	background-image: url('/img/logo.svg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	aspect-ratio: 5 / 1;
+	aspect-ratio: 4 / 1;
 }
 
 .form {
