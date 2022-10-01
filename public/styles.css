@@ -1,34 +1,19 @@
+:root {
+	/* https://brandpalettes.com/lord-of-the-rings-color-codes/ */
+	--light-gold: hsl(47, 94%, 73%);
+	--gold: hsl(44, 96%, 62%);
+	--dark-gold: hsl(22, 67%, 59%);
+	--grey: hsl(214, 9%, 15%);
+}
+
+/* 1. General layout */
+
 *,
 ::before,
 ::after {
 	box-sizing: border-box;
 	margin: 0;
-	/* outline: 1px solid red; */
-	/* font-family: 'PT Sans', sans-serif; */
 }
-
-:root {
-	--light-gold: hsl(47, 94%, 73%);
-	--gold: hsl(44, 96%, 62%);
-	--dark-gold: hsl(22, 67%, 59%);
-	--dark-blue: #14213d;
-
-	--grey: hsl(214, 9%, 15%);
-
-	/* CSS HSL https://coolors.co/palette/03071e-370617-6a040f-9d0208-d00000-dc2f02-e85d04-f48c06-faa307-ffba08*/
-	--xiketic: hsla(231, 82%, 6%, 1);
-	--dark-sienna: hsla(339, 80%, 12%, 1);
-	--rosewood: hsla(354, 93%, 22%, 1);
-	--dark-red: hsla(358, 97%, 31%, 1);
-	--rosso-corsa: hsla(0, 100%, 41%, 1);
-	--vermilion: hsla(12, 98%, 44%, 1);
-	--persimmon: hsla(23, 97%, 46%, 1);
-	--tangerine: hsla(34, 95%, 49%, 1);
-	--orange-web: hsla(39, 96%, 50%, 1);
-	--selective-yellow: hsla(43, 100%, 52%, 1);
-}
-
-/* 1. General layout */
 
 html {
 	height: 100%;
@@ -56,9 +41,6 @@ body {
 		rgba(115, 99, 51, 1) 75%,
 		rgba(35, 38, 42, 1) 100%
 	);
-}
-
-.header {
 }
 
 .main {
@@ -143,16 +125,17 @@ h2 {
 	color: var(--gold);
 	outline: 1px solid var(--gold);
 	border-radius: 5px;
-	transition: box-shadow 0.2s;
 }
 
 .input-book label:hover {
+	transition: box-shadow 0.2s;
 	box-shadow: 0px 0px 20px 0px var(--gold);
 }
 
 .input-book input:checked + label {
 	font-weight: bold;
 	outline: 5px solid var(--gold);
+	transition: outline 0.1s;
 }
 
 .input-book label::after {
