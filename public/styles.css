@@ -86,7 +86,14 @@ body {
 .lorem-ipsum-text {
 	margin: 2em;
 	padding: 1em;
-	border: 1px solid white;
+}
+
+.lorem-ipsum-text p {
+	margin-bottom: 1em;
+}
+
+.lorem-ipsum-text p:last-child {
+	margin-bottom: 0;
 }
 
 .footer {
@@ -104,12 +111,17 @@ h2 {
 	margin: 1.5em 0 0.75em 0;
 }
 
+button,
+label {
+	cursor: pointer;
+}
+
 .btn-copy {
 	position: absolute;
 	top: 1em;
 	right: 3em;
 	aspect-ratio: 1 / 1;
-	width: 3.5em;
+	width: 3em;
 	padding: 0;
 	transition: all 1s;
 }
@@ -187,12 +199,13 @@ button:active {
 	transition: opacity 0.2s;
 }
 
-.text-area:hover .btn-copy {
+.text-area:hover .filled ~ .btn-copy {
 	opacity: 1;
 }
 
 .lorem-ipsum-text {
 	color: white;
+	border: 1px solid white;
 	border-radius: 5px;
 }
 

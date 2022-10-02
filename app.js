@@ -19,15 +19,15 @@ app.use(
 app.use(express.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
-	console.log('startPage');
+	console.log('startPage loaded');
 	res.status(200).send(startPage);
 });
 
 app.post('/', (req, res) => {
 	let loremIpsumText = generateText(req);
 	newPage = startPage.replace(
-		'<div class="lorem-ipsum-text"></div>',
-		`<div class="lorem-ipsum-text">${loremIpsumText}</div>`
+		'<div class="lorem-ipsum-text empty"></div>',
+		`<div class="lorem-ipsum-text filled">${loremIpsumText}</div>`
 	);
 	// why "undefined" appears?? -> Fix
 	newPage = newPage.replace('undefined', '');
