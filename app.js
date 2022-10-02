@@ -26,10 +26,12 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
 	let loremIpsumText = generateText(req);
 	newPage = startPage.replace(
-		'<div class="lorem-ipsum-text">',
-		'<div class="lorem-ipsum-text">' + loremIpsumText
+		'<div class="lorem-ipsum-text"></div>',
+		`<div class="lorem-ipsum-text">${loremIpsumText}</div>`
 	);
-	res.status(200).send(startPage);
+	// why "undefined" appears?? -> Fix
+	newPage = newPage.replace('undefined', '');
+	res.status(200).send(newPage);
 });
 
 app.listen(5500, () => {

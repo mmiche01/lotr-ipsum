@@ -1,14 +1,16 @@
 const generateText = (req) => {
-	const { paragraphs, book } = req.body;
+	const requestedParagraphs = req.body.paragraphs;
+	const bookSource = require(`./data/${req.body.book}`);
+	const wordsPerParagraph = 400;
+	let loremIpsum;
 
-	const loremIpsum = `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-	Id suscipit consequatur doloremque debitis aliquid minima quaerat
-	 amet. Quisquam deleniti nam voluptas ut, similique sapiente molestiae
-	 officia nulla odit dolore culpa mollitia provident eveniet error ipsa.
-	 Reiciendis optio id sapiente aliquam dolorum modi odio? Explicabo quidem
-	 deserunt ducimus fugiat atque voluptatibus iusto corporis enim porro et! Mini`;
-
-	//  ...functionality
+	for (let i = 1; i <= requestedParagraphs; i++) {
+		let newParagraph = '<p>';
+		while (newParagraph.length < 400) {
+			newParagraph += bookSource[Math.floor(Math.random() * bookSource.length)] + '. ';
+		}
+		loremIpsum += newParagraph + '</p>';
+	}
 
 	return loremIpsum;
 };
