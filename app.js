@@ -7,16 +7,19 @@ const generateText = require('./generateText.js');
 
 let startPage = fs.readFileSync('./public/index.html', { encoding: 'utf8' });
 
+// Middleware
+
 app.use(express.static('public'));
 app.use('/normalize', express.static(path.join(__dirname, 'node_modules/modern-normalize')));
 app.use('/img', express.static('img'));
 app.use(favicon(__dirname + '/img/favicon.ico'));
 app.use(
 	'/fontawesome',
-	express.static(path.join(__dirname, 'node_modules/@fortawesome/fontawesome-free/css'))
+	express.static(path.join(__dirname, 'node_modules/@fortawesome/fontawesome-free'))
 );
-
 app.use(express.urlencoded({ extended: false }));
+
+// Routes
 
 app.get('/', (req, res) => {
 	console.log('startPage loaded');
@@ -33,6 +36,8 @@ app.post('/', (req, res) => {
 	newPage = newPage.replace('undefined', '');
 	res.status(200).send(newPage);
 });
+
+// Server
 
 app.listen(5500, () => {
 	console.log('Server ist listening on port 5500');
