@@ -1,6 +1,6 @@
-# Lorem ipsum generator with text from Hobbit, Lord of the Rings and Silmarillion
+## Lorem ipsum generator with text from Hobbit, Lord of the Rings and Silmarillion
 
-Currently only running on localhost
+### [View live demo](https://lotr-ipsum.herokuapp.com/)
 
 ### Credits
 
