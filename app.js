@@ -5,6 +5,8 @@ const path = require('path');
 const favicon = require('serve-favicon');
 const generateText = require('./generateText.js');
 
+const port = process.env.PORT || 3000;
+
 let startPage = fs.readFileSync('./public/index.html', { encoding: 'utf8' });
 
 // Middleware
@@ -39,6 +41,6 @@ app.post('/', (req, res) => {
 
 // Server
 
-app.listen(5500, () => {
-	console.log('Server ist listening on port 5500');
+app.listen(port, () => {
+	console.log(`Server ist listening on port ${port}`);
 });
